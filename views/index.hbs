@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+        <title>Login page</title>
+		<style>
+		h1 {
+		color:blue !important;
+	    background-color:#A0A0A0 !important;
+		border-bottom: 4px solid blue !important;
+	    position:fixed !important;
+	    width:100%;
+	    z-index:99;
+	 	}
+		body {
+		background-color:#778899 !important;
+		}
+		h2{
+		color: blue ! important;
+		}
+		</style>
+    </head>
+    <body>
+        <h1>Login sistem</h1></br></br></br></br></br>
+        <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-6">
+                <h2>Uloguj se kao student</h2>
+                <form action="/login" method="post">
+                    <div class="form-group">
+                        <label for="name">Ime:</label>
+                        <input type="text" class="form-control" placeholder="Ime studenta" name="studentName">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Uloguj se!</button>
+                </form>
+              </div>
+              <div class="col-sm-6"">
+                <h2>Uloguj se kao profesor</h2>
+                <form action="/prof-login" method="post">
+                    <div class="form-group">
+                        <label for="name">Ime:</label>
+                        <input type="text" class="form-control" placeholder="Ime profesora" name="profName">
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd">Lozinka:</label>
+                        <input type="password" class="form-control" id="pwd" placeholder="Lozinka" name="password">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Uloguj se!</button>
+                </form>
+              </div>
+            </div>
+        </div>
+    </body>
+</html>

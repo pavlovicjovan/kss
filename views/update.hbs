@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+        <title>Update page</title>
+		<style>
+		h2 {
+		color:blue !important;
+	    background-color:#A0A0A0 !important;
+		border-bottom: 4px solid blue !important;
+	    position:fixed !important;
+	    width:100%;
+	    z-index:99;
+	 	}
+		h3 {
+		color:blue !important;
+		}
+		body {
+		background-color:#778899 !important;
+		}
+		button {
+		 background-color:white !important;
+		 color: blue !important;
+		}
+		</style>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-12">
+                <h2>Izmeni</h2></br></br></br></br>
+                <form action="/update" method="post">
+                    <div class="form-group">
+                        <h3>Text vezbe:</h3>
+                        <textarea name="exerciseText">{{ text }}</textarea>
+                        <input type="hidden" value="{{ id }}" name="exerciseId">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Izmeni!</button>
+                </form>
+              </div>
+            </div>
+        </div>
+    </body>
+</html>

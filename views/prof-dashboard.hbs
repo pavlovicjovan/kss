@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+        <title>Dashboard page</title>
+		<style>
+		h1 {
+		color:blue !important;
+	    background-color:#A0A0A0 !important;
+		border-bottom: 4px solid blue !important;
+	    position:fixed !important;
+	    width:100%;
+	    z-index:99;
+	 	}
+		h2 {
+		color:blue !important;
+		}
+		body {
+		background-color:#778899 !important;
+		}
+		button {
+		 background-color:white !important;
+		 color: #1E90FF !important;
+		}
+		table {
+		background-color:white !important;
+		}
+		th {
+		color: #1E90FF;
+		}
+		</style>
+    </head>
+    <body>
+        <h1>Profesorska stranica</h1></br></br></br></br>
+
+
+        <h2>Lista vezbi</h2></br>
+        <div class="container">
+        	<div class="row">
+        		<table class="table table-hover">
+		            <thead class="">
+		                <tr>
+		                    <th>Predmet</th>
+		                    <th>Text vezbe</th>
+		                    <th>Broj vezbe</th>
+		                    <th>Izmeni vezbu</th>
+		                </tr>
+		            </thead>
+		            <tbody>
+		            {{# each exercises }}
+		                <tr>
+		                    <th >{{ this.subject }}</th>
+		                    <td>{{ this.text }}</td>
+		                    <td>{{ this.number }} </td>
+		                    <td><a href="/update/{{ this.id }}"><button type="button" class="btn btn-success">Izmeni</button></a></td>
+		                </tr>
+		            {{/each}}
+		            </tbody>
+		        </table>
+        	</div>
+    	</div></br>
+		<button type="submit" class="btn btn-primary"><a href="/prof-logout"><b>Logout</b></a></button>
+    </body>
+</html>

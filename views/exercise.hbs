@@ -1,0 +1,36 @@
+<html>
+    <head>
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+        <title>Dashboard page</title>
+		<style>
+		h1 {
+		color:blue !important;
+	    background-color:#A0A0A0 !important;
+		border-bottom: 4px solid blue !important;
+	    position:fixed !important;
+	    width:100%;
+	    z-index:99;
+	 	}
+		body {
+		background-color:#778899 !important;
+		}
+		button {
+		 background-color:white !important;
+		}
+		p {
+		color: #1E90FF;
+		}
+		</style>
+    </head>
+    <body>
+        <h1>Dashboard</h1></br></br></br></br>
+        <div class="container">
+        	<div class="row">
+        		<div class="col-sm-6" style="background-color:#F5F5F5; outline: 1px solid black; margin-top: 10px;">
+        		    <p>{{ text }}</p>
+        		</div>
+        	</div>
+        </div></br></br>
+        <button type="submit" class="btn btn-primary"><a href="/logout"><b>Logout</b></a></button>
+    </body>
+</html>
